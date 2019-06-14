@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color ="tertiary">
+      <ion-button (click)='pruebaUbic()' slot="start" color="tertiary">
+          <ion-icon name="arrow-back"></ion-icon>
+       </ion-button>
+    <ion-title>Pizza</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<h2>Seleccione los Ingredientes</h2>
+  <br>
+  <ion-item>
+      <ion-label>Orillas rellenas de Queso</ion-label>
+    <ion-toggle color="tertiary" [(ngModel)]="isToggled" (ionChange)="MandarUbicacion(isToggled)"></ion-toggle>
+  </ion-item>
+  <ion-list>
+      <ion-item >
+          <ion-label>Peperoni</ion-label>
+          <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+        </ion-item>
+    
+        <ion-item >
+            <ion-label>Piña</ion-label>
+            <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+          </ion-item>
+    
+          <ion-item >
+              <ion-label>Anchoas</ion-label>
+              <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+            </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>Tamaño de la Pizza:</ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Grande</ion-label>
+            <ion-radio slot="start" value="biff" checked></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Familiar</ion-label>
+            <ion-radio slot="start" value="griff"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Jumbo</ion-label>
+            <ion-radio slot="start" value="buford"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-content>
+<ion-footer padding>
+  <ion-toolbar>
+  <ion-button (click)='pruebaUbic()' slot="start" color="danger">
+      <ion-icon name="undo"></ion-icon>
+   </ion-button>
+ <ion-button (click)='pruebaUbic()' slot= "end" color = "success">
+    <ion-icon name="checkmark"></ion-icon>
+ </ion-button>
+</ion-toolbar>
+</ion-footer>
